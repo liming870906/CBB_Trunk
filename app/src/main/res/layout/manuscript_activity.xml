@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_act_fLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/manuscript_search_rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_39.6"
+            android:background="@color/color_eef1f6"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingRight="@dimen/dp_13">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/manuscript_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_28"
+                    android:drawableLeft="@drawable/manuscript_search"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:text="@string/manuscript_search"
+                    android:textColor="@color/color_bcbfcb"
+                    android:textSize="@dimen/text_size_48" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/manuscript_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/manuscript_search_rlayout"
+            android:background="@color/color_f3f4f8"
+            android:orientation="vertical">
+
+            <View android:id="@+id/manuscript_topLine" style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/manuscript_notNet"
+                android:layout_width="match_parent"
+                android:background="@color/color_f2d8dc"
+                android:layout_height="@dimen/dp_37">
+
+                <View style="@style/line_style4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/manuscript_netErrNotCloudData"
+                    android:textColor="@color/color_c43d4a"
+                    android:textSize="@dimen/text_size_36" />
+
+                <View
+                    style="@style/line_style4"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/manuscript_line">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/maunscript_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_f3f4f8"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+            <LinearLayout
+                android:id="@+id/manuscript_not_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_90"
+                    android:src="@drawable/no_manuscript" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4.7"
+                    android:gravity="center"
+                    android:text="@string/manuscript_not_text"
+                    android:textColor="@color/color_20314c"
+                    android:textSize="@dimen/text_size_72" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_7.4"
+                    android:gravity="center"
+                    android:text="@string/manuscript_create"
+                    android:textColor="@color/color_9da1af"
+                    android:textSize="@dimen/text_size_40" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/manuscript_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/manuscript_add_bg_selector"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/manuscript_add" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/manuscript_botton_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View style="@style/line_style" />
+
+                    <TextView
+                        android:id="@+id/manuscript_all_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/meg_select"
+                        android:drawablePadding="@dimen/dp_16"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:text="@string/message_all"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_44" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/manuscript_delete_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_dadbde"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_44" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
+

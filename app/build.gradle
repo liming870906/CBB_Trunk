@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        cbb {
+            keyAlias 'cbb'
+            keyPassword '123456'
+            storeFile file('../keystore.jks')
+            storePassword '123456'
+            v2SigningEnabled false
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.tingtingfm.cbb"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 24
+        versionName "1.2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.cbb
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "cbb_v${variant.versionName}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+
+        disable 'InvalidPackage'
+    }
+}
+apply plugin: 'com.neenbedankt.android-apt'//添加这行
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // 图像剪切
+    compile('com.kevin:crop:1.0.2') {
+        // 如果已经引入 support:appcompat-v7 可以加上这句话
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    //添加这行
+    compile project(':cropper')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/playengine.jar')
+    compile project(':waveview')
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.alibaba:fastjson:1.2.22'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'com.android.support:support-v4:22.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile files('libs/eventbus.jar')
+    compile 'com.facebook.stetho:stetho:1.5.0'
+
+}
+repositories {
+    mavenCentral()
+}

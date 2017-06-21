@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88">
+
+        <ImageView
+            android:id="@+id/iv_item_material_manager_icon"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:background="@color/color_ebecf1"
+            android:scaleType="centerCrop" />
+
+        <CheckBox
+            android:id="@+id/cb_item_material_manage_choose"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_5"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+
+
+
+
+        <FrameLayout
+            android:id="@+id/fl_item_material_manager_video_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/material_video_time_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_item_material_manager_video_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:layout_marginRight="@dimen/dp_3"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_item_material_manage_upload_loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/material_upload_loading_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_item_material_manager_upload_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/material_upload_loading" />
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_item_material_manager_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_item_material_manager_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4.3"
+        android:ellipsize="end"
+        android:maxLength="18"
+        android:singleLine="true"
+        android:textColor="@color/color_20314c"
+        android:textSize="@dimen/text_size_42"
+        android:visibility="gone" />
+</LinearLayout>

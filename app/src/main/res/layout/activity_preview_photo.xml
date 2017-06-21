@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/preview_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/preview_layout_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <com.tingtingfm.cbb.ui.view.UploadLoadView
+                android:id="@+id/preview_img_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/preview_txt_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_30"
+                android:gravity="center"
+                android:textColor="@color/color_737373"
+                android:text="@string/material_manage_bottom_upload"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/preview_txt_crop"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/material_crop_selector"
+            android:text="@string/material_manage_crop"/>
+
+        <TextView
+            android:id="@+id/preview_txt_send"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/material_send_selector"
+            android:text="@string/material_manage_bottom_send"/>
+
+        <TextView
+            android:id="@+id/preview_txt_delete"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/material_delete_selector"
+            android:text="@string/material_manage_bottom_delete"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/preview_bottom">
+
+        <com.tingtingfm.cbb.ui.view.PreviewPhotoView
+            android:id="@+id/preview_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_292b30"/>
+
+        <ProgressBar
+            android:id="@+id/preview_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/dialog_load_center_image"
+            />
+    </FrameLayout>
+</RelativeLayout>

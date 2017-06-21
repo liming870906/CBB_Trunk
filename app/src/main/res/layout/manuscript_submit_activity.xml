@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/manuscript_rLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_435275"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_48">
+
+    <RelativeLayout
+        android:id="@+id/submit_rlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_154.3"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_218"
+            android:layout_height="@dimen/dp_218"
+            android:src="@drawable/manuscript_submit_img" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/manuscript_progressNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_697FB4"
+                android:textSize="@dimen/text_size_110" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/color_697FB4"
+                android:textSize="@dimen/text_size_110" />
+        </LinearLayout>
+
+        <com.tingtingfm.cbb.ui.view.CircleProcessView
+            android:id="@+id/cus_circle"
+            android:layout_width="198.5dp"
+            android:layout_height="198.5dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android_custom:circleColor="@color/transparent"
+            android_custom:circleMargin="15"
+            android_custom:roundBackground="@drawable/day_circle_1_top"
+            android_custom:dotColor="@color/color_6a80b1"
+            android_custom:roundProgressColor="@color/color_4a5b80"
+            android_custom:thWidth="40dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/manuscript_upload_fail_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_202.7"
+        android:src="@drawable/manuscript_upload_fail"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/manuscript_submittingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit_rlayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30.3"
+        android:text="@string/manuscript_submiting"
+        android:textColor="@color/color_697FB4"
+        android:textSize="@dimen/text_size_48" />
+    <TextView
+        android:id="@+id/manuscript_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30.3"
+        android:drawableLeft="@drawable/manuscript_submit_success"
+        android:drawablePadding="@dimen/dp_7"
+        android:textSize="@dimen/text_size_52"
+        android:visibility="gone"
+        android:textColor="@color/color_697fb4"
+        android:text="@string/manuscript_submit_success"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/submit_textView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_38"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/b697fb4_526592_bg_selector"
+            android:gravity="center"
+            android:text="@string/manuscript_cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_48" />
+
+        <LinearLayout
+            android:id="@+id/manuscript_cancel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/manuscript_submit_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_38"
+                android:layout_weight="1"
+                android:background="@drawable/manuscript_cancel_submit_background"
+                android:gravity="center"
+                android:text="@string/manuscript_cancel"
+                android:textColor="@color/color_697FB4"
+                android:textSize="@dimen/text_size_48" />
+
+            <TextView
+                android:id="@+id/manuscript_submit_reUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_13.3"
+                android:layout_weight="1"
+                android:background="@drawable/b697fb4_526592_bg_selector"
+                android:gravity="center"
+                android:text="@string/manuscript_reSubmit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_48" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

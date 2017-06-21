@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.tingtingfm.cbb.ui.activity.MaterialManageActivity">
+    <include layout="@layout/activity_material_manage_title" />
+    <FrameLayout
+        android:id="@+id/fl_material_manager_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_f3f4f8"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.3"
+        android:background="@color/color_d2d2d2" />
+
+    <LinearLayout
+        android:id="@+id/ll_material_manager_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_material_manager_upload"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_material_manager_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6.7"
+                android:src="@drawable/material_upload_default" />
+
+            <TextView
+                android:id="@+id/tv_material_manager_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1.3"
+                android:text="@string/material_manage_bottom_upload"
+                android:textColor="@color/color_bac2cd"
+                android:textSize="@dimen/text_size_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_material_manager_send"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_material_manager_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6.7"
+                android:src="@drawable/material_send_default" />
+
+            <TextView
+                android:id="@+id/tv_material_manager_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1.3"
+                android:text="@string/material_manage_bottom_send"
+                android:textColor="@color/color_bac2cd"
+                android:textSize="@dimen/text_size_30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_material_manager_delete"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_material_manager_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6.7"
+                android:src="@drawable/material_delete_default" />
+
+            <TextView
+                android:id="@+id/tv_material_manager_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1.3"
+                android:text="@string/material_manage_bottom_delete"
+                android:textColor="@color/color_bac2cd"
+                android:textSize="@dimen/text_size_30" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_material_manager_sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:textColor="@color/color_c1c1c1"
+        android:textSize="@dimen/text_size_54"
+        android:text="@string/audio_record_dialog_sure"
+        android:background="@color/white"
+        android:visibility="gone"/>
+</LinearLayout>

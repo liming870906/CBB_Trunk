@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical"
+    android:paddingTop="15.3dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="3x2"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="3x5"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="4x3"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="4x6"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="5x7"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="8x10"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="16x9"/>
+
+        <TextView
+            style="@style/crop_text_style"
+            android:text="9x16"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/crop_text_style_1"
+            android:text="@string/material_manage_scale"/>
+
+        <TextView
+            style="@style/crop_text_style_1"
+            android:text="@string/material_manage_square"/>
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="15.3dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.3"
+        android:background="@color/color_d2d2d2"/>
+
+    <TextView
+        android:id="@+id/view_crop_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44.3"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_697fb4"
+        android:textSize="@dimen/text_size_48"/>
+</LinearLayout>

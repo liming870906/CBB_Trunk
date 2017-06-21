@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_f3f4f8"
+              android:fitsSystemWindows="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/dp_20"
+              android:paddingRight="@dimen/dp_20"
+              android:paddingTop="@dimen/dp_43.3">
+
+    <LinearLayout
+        android:id="@+id/make_account_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="49dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/make_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_38"
+                android:background="@drawable/edit_text_background1"
+                android:gravity="center_vertical"
+                android:hint="@string/make_account"
+                android:maxLength="50"
+                android:paddingLeft="@dimen/dp_44.3"
+                android:paddingRight="@dimen/dp_44.3"
+                android:singleLine="true"
+                android:textColor="@color/color_737373"
+                android:textColorHint="@color/color_c8c8c8"
+                android:textSize="@dimen/text_size_40"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16.7"
+                android:src="@drawable/login_name"/>
+
+            <ImageView
+                android:id="@+id/make_account_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/make_account"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16.7"
+                android:src="@drawable/login_remove"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/make_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_38"
+                android:background="@drawable/edit_text_background1"
+                android:gravity="center_vertical"
+                android:hint="@string/make_password"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:paddingLeft="@dimen/dp_44.3"
+                android:paddingRight="@dimen/dp_44.3"
+                android:singleLine="true"
+                android:textColor="@color/color_737373"
+                android:textColorHint="@color/color_c8c8c8"
+                android:textSize="@dimen/text_size_40"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16.7"
+                android:src="@drawable/login_password"/>
+
+            <ImageView
+                android:id="@+id/make_password_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/make_password"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16.7"
+                android:src="@drawable/login_remove"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/make_to_net"
+            android:textColor="@color/color_697fb4"
+            android:textSize="@dimen/text_size_38"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/make_ap_username_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_115.3"
+        android:layout_marginBottom="@dimen/dp_54.7"
+        android:background="@drawable/edit_text_background"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/dp_14"
+        android:paddingRight="@dimen/dp_14"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_33"
+                android:text="@string/make_workstation"
+                android:textColor="@color/color_20314c"
+                android:textSize="@dimen/text_size_44"
+                />
+
+            <TextView
+                android:id="@+id/make_ap_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dfsadfsad"
+                android:textColor="@color/color_20314c"
+                android:textSize="@dimen/text_size_44"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/make_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:background="@drawable/b697fb4_526592_bg_selector"
+        android:text="@string/audio_record_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_48"/>
+
+</LinearLayout>

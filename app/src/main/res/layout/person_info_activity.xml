@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:fitsSystemWindows="true"
+              android:paddingLeft="@dimen/dp_20">
+
+    <LinearLayout
+        android:id="@+id/person_root_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/person_head_imgView"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginBottom="@dimen/dp_35.3"
+
+                android:layout_marginTop="@dimen/dp_41.3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_name"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_33"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_id"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_50.7"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_phone"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_33"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_mail"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_33"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_department"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_33"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50.7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_role"
+                android:textColor="@color/color_9da1af"
+                android:textSize="@dimen/text_size_48"/>
+
+            <TextView
+                android:id="@+id/person_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_33"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/color_737373"
+                android:textSize="@dimen/text_size_48"/>
+        </LinearLayout>
+
+        <View style="@style/line_style"/>
+
+    </LinearLayout>
+
+</LinearLayout>

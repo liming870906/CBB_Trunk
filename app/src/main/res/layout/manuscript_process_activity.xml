@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/manuscript_rLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f3f4f8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/manuscript_process_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/color_e5e6ea"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:text="@string/manuscript_select_"
+            android:textColor="@color/color_323232"
+            android:textSize="@dimen/text_size_48" />
+
+        <ListView
+            android:id="@+id/submit_listView"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_20"
+            android:divider="@null"
+            android:dividerHeight="0px"
+            android:paddingRight="@dimen/dp_20"
+            android:listSelector="@color/transparent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="@dimen/dp_60">
+            <View style="@style/line_style1"></View>
+            <TextView
+                android:id="@+id/submit_textView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:background="@drawable/b697fb4_526592_bg_selector"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_48" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/manuscript_no_data_layout"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="@dimen/dp_130"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_process"/>
+        <TextView
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manuscript_no_process_data"
+            />
+    </LinearLayout>
+</FrameLayout>

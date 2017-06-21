@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_material_manager_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_28"
+        android:background="@color/color_eaeef1"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_40"
+        android:paddingLeft="@dimen/dp_18.7" />
+
+    <com.tingtingfm.cbb.ui.view.MaterialGridView
+        android:id="@+id/gv_item_material_manager_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_2"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:listSelector="@null"
+        android:paddingLeft="@dimen/dp_1"
+        android:horizontalSpacing="@dimen/dp_2"
+        android:verticalSpacing="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"/>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_82.3"
+    android:background="@drawable/manuscript_list_bg_selector">
+
+    <ImageView
+        android:id="@+id/iv_item_send_contact_icon"
+        android:layout_width="@dimen/dp_54"
+        android:layout_height="@dimen/dp_54"
+        android:layout_marginTop="@dimen/dp_14.3"
+        android:src="@drawable/main_person_head"
+        android:layout_marginLeft="@dimen/dp_20"/>
+
+    <TextView
+        android:id="@+id/tv_item_send_contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dp_191"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_toRightOf="@id/iv_item_send_contact_icon"
+        android:textColor="@color/color_20314c"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_48" />
+
+    <TextView
+        android:id="@+id/tv_item_send_rote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dp_194.7"
+        android:layout_alignLeft="@id/tv_item_send_contact_name"
+        android:layout_below="@id/tv_item_send_contact_name"
+        android:layout_marginTop="@dimen/dp_4.3"
+        android:textColor="@color/color_9da1af"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_40" />
+
+    <CheckBox
+        android:id="@+id/cb_item_send_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        style="@style/CheckboxSendTheme"
+        android:layout_marginRight="@dimen/dp_20"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.3"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_d2d2d2"
+        android:layout_marginLeft="@dimen/dp_20"/>
+</RelativeLayout>

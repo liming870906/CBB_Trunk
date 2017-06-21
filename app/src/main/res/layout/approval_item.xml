@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13">
+
+        <TextView
+            android:id="@+id/approval_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_50"
+            android:textColor="@color/color_333333"
+            android:lineSpacingExtra="@dimen/dp_5.7"
+            android:maxLines="2"
+            android:maxLength="40"
+            android:layout_marginTop="@dimen/dp_16"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_13.3"
+            android:layout_marginTop="@dimen/dp_9">
+
+            <TextView
+                android:id="@+id/approval_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_afafaf"
+                android:textSize="@dimen/text_size_40"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/approval_item_state"
+                android:layout_width="@dimen/dp_62"
+                android:layout_height="@dimen/dp_18"
+                android:textSize="@dimen/text_size_34"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/dp_16.3"
+                android:layout_toLeftOf="@id/approval_item_state"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/approval_item_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_40"/>
+
+                <TextView
+                    android:id="@+id/approval_item_proposer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_40"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_style1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_13"/>
+</LinearLayout>

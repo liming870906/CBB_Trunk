@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f3f4f8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/start_approval_des1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manuscript_please_text"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_46" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manuscript_please_text_des"
+            android:textColor="@color/color_afafaf"
+            android:textSize="@dimen/text_size_42" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/start_approval_line"
+        style="@style/line_style"
+        android:layout_below="@id/start_approval_des1"
+        android:layout_marginLeft="@dimen/dp_13"/>
+    <FrameLayout
+        android:id="@+id/fl_approval_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:layout_below="@id/start_approval_line"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/start_approval_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="@string/manuscript_input"
+            android:textColorHint="@color/color_c8c8c8"
+            android:textSize="@dimen/text_size_42"
+            android:paddingLeft="@dimen/dp_13"
+            android:lineSpacingExtra="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_13"
+            android:paddingTop="@dimen/dp_17"
+            android:maxLength="200"/>
+        <Button
+            android:id="@+id/btn_approval_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/start_approval_text_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:layout_below="@id/fl_approval_text_layout"
+        android:background="@color/white"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13"
+        android:textSize="@dimen/text_size_40"
+        android:textColor="@color/color_c8c8c8"
+        android:text="@string/manuscript_approval_text_count" />
+
+    <View
+        android:id="@+id/start_approval_line1"
+        style="@style/line_style"
+        android:layout_below="@id/start_approval_text_num"
+        android:layout_marginBottom="@dimen/dp_3.3"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13" />
+
+    <LinearLayout
+        android:id="@+id/start_approval_des2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:layout_below="@id/start_approval_line1"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manuscript_please_audio"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_46" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manuscript_please_text_des"
+            android:textColor="@color/color_afafaf"
+            android:textSize="@dimen/text_size_42" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/start_approval_audio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_63"
+        android:layout_below="@id/start_approval_des2"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/btn_clear_record"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_17.7"
+            android:layout_marginRight="@dimen/dp_9.3"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/approval_delete"/>
+        <com.tingtingfm.cbb.ui.view.RecordLayoutView
+            android:id="@+id/rlv_record"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_4.3"
+            android:background="@color/white"
+            android:layout_height="@dimen/dp_54"
+            android:layout_toLeftOf="@id/btn_clear_record"
+            android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/start_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingRight="@dimen/dp_13">
+
+        <Button
+            android:id="@+id/btn_approval_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_37"
+            android:layout_weight="1"
+            android:text="@string/manuscript_approval_ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_46"
+            android:background="@drawable/btn_approval_81cdbb"/>
+
+        <Button
+            android:id="@+id/btn_approval_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_37"
+            android:layout_marginLeft="@dimen/dp_6.7"
+            android:layout_weight="1"
+            android:text="@string/manuscript_approval_no"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_46"
+            android:background="@drawable/btn_approval_f26c72"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_above="@id/start_bottom_layout"></View>
+</RelativeLayout>
+
+

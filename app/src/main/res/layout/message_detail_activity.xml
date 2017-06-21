@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_f3f4f8"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f3f4f8"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/msg_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_33"
+            android:textColor="@color/color_c8c8c8"
+            android:textSize="@dimen/text_size_36" />
+
+        <com.tingtingfm.cbb.ui.view.AdaptableTextView
+            android:id="@+id/msg_detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/msg_detail_background"
+            android:lineSpacingExtra="@dimen/dp_6"
+            android:padding="@dimen/dp_20"
+            android:textColor="@color/color_20314c"
+            android:textSize="@dimen/text_size_42" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_33">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/message_detail_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:background="@drawable/msg_detail_ok_bg_seletor"
+                    android:text="@string/message_detail_no"
+                    android:visibility="gone"
+                    android:textColor="@drawable/msg_detail_ok_size_color_seletor"
+                    android:textSize="@dimen/text_size_48" />
+
+                <Button
+                    android:id="@+id/message_detail_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:background="@drawable/msg_detail_cancel_bg_seletor"
+                    android:text="@string/message_detail_ok"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_48" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/message_detail_des"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:visibility="gone"
+                android:background="@drawable/msg_detail_des_background"
+                android:text="@string/message_detail_agreed"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_48" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

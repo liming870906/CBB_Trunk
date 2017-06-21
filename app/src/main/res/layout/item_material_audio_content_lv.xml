@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_material_audio_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_28"
+        android:background="@color/color_eaeef1"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/dp_13"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_40" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_material_audio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_74"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_13">
+
+        <CheckBox
+            android:id="@+id/cb_item_material_audio_choose"
+            style="@style/CustomCheckboxTheme1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_14"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_material_audio_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_16.7"
+                android:ellipsize="middle"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:textColor="@color/color_444444"
+                android:textSize="@dimen/text_size_46" />
+
+            <TextView
+                android:id="@+id/tv_item_material_audio_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_material_audio_name"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="@color/color_afafaf"
+                android:textSize="@dimen/text_size_40" />
+
+            <TextView
+                android:id="@+id/tv_item_material_audio_time_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_item_material_audio_date"
+                android:layout_below="@id/tv_item_material_audio_name"
+                android:layout_marginLeft="@dimen/dp_41"
+                android:layout_toRightOf="@id/tv_item_material_audio_date"
+                android:textColor="@color/color_afafaf"
+                android:textSize="@dimen/text_size_40" />
+
+            <TextView
+                android:id="@+id/tv_item_material_upload_status"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_16.7"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_item_material_audio_name"
+                android:layout_marginTop="@dimen/dp_6"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_31"
+                android:layout_marginRight="@dimen/dp_13"/>
+            <View style="@style/line_style1"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

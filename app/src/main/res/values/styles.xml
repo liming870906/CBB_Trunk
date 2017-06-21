@@ -1,0 +1,130 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="WelcomeContentOverlay" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_d2d2d2</item>
+    </style>
+
+    <style name="line_style1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.3dp</item>
+        <item name="android:background">@color/color_d2d2d2</item>
+    </style>
+
+    <style name="line_style2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_e3e3e3</item>
+    </style>
+
+    <style name="line_style3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_26000000</item>
+    </style>
+
+    <style name="line_style4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.3px</item>
+        <item name="android:background">@color/color_db989f</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+    <!-- 状态栏 -->
+    <style name="MyToolBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_material_style_selector</item>
+    </style>
+    <style name="CustomCheckboxTheme1" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_material_style_selector1</item>
+    </style>
+    <style name="CheckboxSendTheme" parent="CustomCheckboxTheme">
+        <item name="android:button">@drawable/cb_send_style_selector</item>
+    </style>
+
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">@dimen/dp_1.3</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/sb_audio_preview_seekbar_layer</item>
+        <item name="android:minHeight">@dimen/dp_1.3</item>
+        <item name="android:thumb">@drawable/audio_preview_seekbar_kuai</item>
+        <item name="android:thumbOffset">0dip</item>
+    </style>
+    <style name="button_style">
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:textColor">@color/tv_color_b8737373_seletor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6.7dp</item>
+        <!--<item name="android:drawablePadding">1.3dp</item>-->
+        <item name="android:paddingBottom">7.3dp</item>
+    </style>
+
+    <style name="crop_text_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_50</item>
+        <item name="android:textColor">@color/color_737373</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="crop_text_style_1">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_46</item>
+        <item name="android:textColor">@color/color_737373</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 自定义diaolog -->
+    <style name="defind_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="mini_player_pop_anim_style" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/mini_player_pop_anim_up</item>
+        <item name="android:windowExitAnimation">@anim/mini_player_pop_anim_down</item>
+    </style>
+
+    <style name="new_circle_progress" parent="@android:style/Theme.Holo.Dialog">
+        <!--<item name="android:indeterminateDrawable">@drawable/ic_circle_progress_rotate</item>-->
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
